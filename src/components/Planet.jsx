@@ -1,12 +1,13 @@
 import "./Planet.css";
 import Button from "./Button"
-import Card from "./Card"
+import Cards from "./Card"
 
 function Planet() {
 
 
     return (
       <div>
+      <div className="planet-image"><img src="src/assets/planet-mercury.svg"></img></div>
         <span className="planet">Mercury</span>
         <div className="overview">
             <p>
@@ -17,9 +18,7 @@ function Planet() {
         <Button>Internal Structure</Button>
         <Button>Surface Geology</Button>
         <div className="cards">
-            <Card />
-            <Card />
-            <Card />
+            <Cards />
         </div> 
       </div>
 

@@ -1,0 +1,5 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: solid #838391 .5px;
+}
