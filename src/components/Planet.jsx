@@ -17,9 +17,8 @@ function Planet() {
         </div>
         </div>
         <Buttons />
-        <div className="cards">
             <Cards />
-        </div> 
+
       </div>
 
     )
