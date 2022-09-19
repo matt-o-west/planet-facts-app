@@ -1,14 +1,15 @@
 //import {Link} from "react-router-dom"
 import "./Nav.css"
 
-function Button() {
+function Buttons() {
 
 
     return (
       <div>
+        
 
       </div>
     )
   }
   
-  export default Button
+  export default Buttons
