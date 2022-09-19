@@ -32,7 +32,9 @@
     font-weight: 500;
     padding: 0rem;
     margin: 0;
-
+    color: #838391;
+    font-weight: 500;
+    word-spacing: 0.1rem;
 }
 
 .card-value {

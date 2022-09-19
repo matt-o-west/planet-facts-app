@@ -6,9 +6,11 @@ function Buttons() {
 
     return (
       <div>
+        <div className="buttons">
         <button className="btn">Internal Structure</button>
         <button className="btn">Surface Geology</button>
         <button className="btn">Overview</button>
+        </div>
       </div>
     )
   }
