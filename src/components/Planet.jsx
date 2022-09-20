@@ -2,8 +2,8 @@ import "./Planet.css";
 import Buttons from "./Buttons"
 import Cards from "./Cards"
 
-function Planet() {
-
+function Planet(props) {
+  console.log(props)
 
     return (
       <div>
