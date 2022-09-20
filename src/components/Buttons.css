@@ -3,15 +3,18 @@
     grid-template-columns: 1fr;
     grid-row-gap: 1rem;
     position: absolute;
-    left: 80%;
+    left: 70%;
+
 }
 
 .btn {
+    width: 360px;
+    height: 52px;
+    font-family: "League Spartan", sans-serif;
     color: #fff;
-    border-radius: 4px;
-    background-color: #38384F;
+    background-color: transparent;
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5;
     text-align: center;
@@ -20,4 +23,16 @@
     user-select: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    border: solid #38384F 1px;
+}
+
+.btn:hover {
+    background-color: #38384F;
+    color: #fff;
+    transition: all 0.1s ease-out;
+    
+}
+
+.btn:focus {
+    background-color: #419EBB;
 }

@@ -27,6 +27,8 @@
 
 
 .card-title {
+    display: flex;
+    justify-content: flex-start;
     grid-column: 1 / 5;
     font-size: 1.5rem;
     font-weight: 500;
@@ -38,6 +40,8 @@
 }
 
 .card-value {
+    display: flex;
+    justify-content: flex-start;
     grid-column: 1 / 5;
     font-size: 1.2rem;
     line-height: 1.5;
