@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import "./Nav.css"
 
-function Nav() {
+function Nav(props) {
 
 
     return (

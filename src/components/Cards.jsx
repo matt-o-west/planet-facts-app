@@ -2,7 +2,7 @@
 import "./Nav.css"
 import "./Cards.css"
 
-function Cards() {
+function Cards(props) {
 
 
     return (

@@ -1,8 +1,10 @@
 import "./Planet.css";
 import Buttons from "./Buttons"
 import Cards from "./Cards"
+import {useParams} from "react-router-dom"
 
 function Planet(props) {
+  const {planet} = useParams()
   console.log(props)
 
     return (
@@ -16,8 +18,8 @@ function Planet(props) {
             </p>
         </div>
         </div>
-        <Buttons />
-        <Cards />
+        <Buttons onClick={props.onClick}/>
+        <Cards facts={props.facts}/>
 
       </div>
 
