@@ -2,7 +2,6 @@
 import './App.css'
 import Nav from './components/Nav'
 import Planet from './components/Planet'
-import {BrowserRouter as Router} from "react-router-dom"
 import {Route} from "react-router-dom"
 import {useState} from 'react'
 import Data from "./data.json"
@@ -21,14 +20,10 @@ function App() {
   console.log(planets)
 
   return (
-  <Router>
     <main className="App">
       <Nav />
-    <Route path="/mercury">
-      <Planet facts={planets} onClick={handleClick}/>
-    </Route>
+      <Planet />
     </main>
-  </Router>
   )
 }
 

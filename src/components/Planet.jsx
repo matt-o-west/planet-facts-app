@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom"
 import Data from "../data.json"
 
-function Planet() {
+function Planet(props) {
   const {planet} = useParams()
   const [planets, setPlanets] = useState([])
   console.log(planet)
