@@ -3,25 +3,20 @@ import './App.css'
 import Nav from './components/Nav'
 import Planet from './components/Planet'
 import {BrowserRouter as Router} from "react-router-dom"
-import {useEffect, useState} from 'react'
+import {Route} from "react-router-dom"
+import {useState} from 'react'
+import Data from "./data.json"
 
 function App() {
   const [planets, setPlanets] = useState([])
-  const [id, setId] = useState(1)
   const [loading, setLoading] = useState(true)
 
-  function handleClick(id) { 
-    setId(id)
+  function handleClick(event) { 
+    setPlanets(event.target.value)
   }
 
-  useEffect(() => {
-    fetch(`src/assets/data.json`) 
-      .then(response => response.json())
-      .then(data => {
-        setPlanets(data.name)
-        setLoading(false)
-      })
-  }, [])
+  console.log(Data[0].name)
+  console.log(planets)
 
   console.log(planets)
 
@@ -29,7 +24,9 @@ function App() {
   <Router>
     <main className="App">
       <Nav />
+    <Route path="/mercury">
       <Planet facts={planets} onClick={handleClick}/>
+    </Route>
     </main>
   </Router>
   )

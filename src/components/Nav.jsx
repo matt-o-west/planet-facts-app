@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import {Link, BrowserRouter} from "react-router-dom"
 import "./Nav.css"
 
 function Nav(props) {

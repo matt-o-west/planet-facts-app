@@ -1,11 +1,22 @@
 import "./Planet.css";
 import Buttons from "./Buttons"
 import Cards from "./Cards"
+import {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom"
+import Data from "../data.json"
 
-function Planet(props) {
+function Planet() {
   const {planet} = useParams()
-  console.log(props)
+  const [planets, setPlanets] = useState([])
+  console.log(planet)
+
+  useEffect(() => { 
+    Data.map(item => {
+     if (item === planet) {
+       setPlanets(planet)
+     }
+    })
+  }, [])
 
     return (
       <div>
