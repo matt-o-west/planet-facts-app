@@ -5,18 +5,30 @@ import {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom"
 import Data from "../data.json"
 
-function Planet(props) {
-  const {planet} = useParams()
-  const [planets, setPlanets] = useState([])
-  console.log(planet)
+function Planet() {
+  const [planets, setPlanets] = useState({})
+  const params = useParams()
+  //const [loading, setLoading] = useState(true)
 
-  useEffect(() => { 
-    Data.map(item => {
-     if (item === planet) {
-       setPlanets(planet)
-     }
+  function handleClick(event) { 
+    setPlanets(event.target.value)
+  }
+
+
+  useEffect(() => {
+    Data.forEach(planet => {
+      if (params.planets === planet.name) {
+        setPlanets(planet)
+      }
     })
-  }, [])
+    //setLoading(false)
+  }, [params])
+
+  
+  console.log(params.planets)
+  //console.log(planet)
+  console.log(params)
+
 
     return (
       <div>
@@ -29,8 +41,8 @@ function Planet(props) {
             </p>
         </div>
         </div>
-        <Buttons onClick={props.onClick}/>
-        <Cards facts={props.facts}/>
+        <Buttons onClick={handleClick}/>
+        <Cards facts={planets}/>
 
       </div>
 

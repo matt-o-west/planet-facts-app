@@ -2,27 +2,20 @@
 import './App.css'
 import Nav from './components/Nav'
 import Planet from './components/Planet'
-import {Route} from "react-router-dom"
-import {useState} from 'react'
-import Data from "./data.json"
+import {Route, Routes} from "react-router-dom"
+//import {useEffect, useState} from 'react'
+//import Data from "./data.json"
 
 function App() {
-  const [planets, setPlanets] = useState([])
-  const [loading, setLoading] = useState(true)
 
-  function handleClick(event) { 
-    setPlanets(event.target.value)
-  }
-
-  console.log(Data[0].name)
-  console.log(planets)
-
-  console.log(planets)
+  //console.log(Data[0].name)
 
   return (
     <main className="App">
-      <Nav />
-      <Planet />
+        <Nav />
+      <Routes>
+        <Route path="/:planets" element={<Planet/>}/>
+      </Routes>
     </main>
   )
 }
