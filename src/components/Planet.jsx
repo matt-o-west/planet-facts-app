@@ -15,28 +15,25 @@ function Planet() {
   }
 
   //console.log(Data.forEach((planet) => {console.log(planet)}))
-  console.log(planets)
+  //console.log(planets)
 
   useEffect(() => {
     Data.forEach(planet => {
       if (params.planets.toLowerCase() === planet.name.toLowerCase()) {
         
         setPlanets(planet)
-        console.log(planet.overview)
+        //console.log(planet.overview)
       }
     })
     //setLoading(false)
   }, [params])
 
-  
-  //console.log(params.planets)
-  //console.log(planet)
-  //console.log(params)
+
 
 
     return (
       <div>
-      <div className="planet-image"><img src="src/assets/planet-mercury.svg"></img></div>
+      <div className="planet-image"><img src={"src/assets/planet-" + planets.name + ".svg"}></img></div>
       <div className="planet-info">
         <span className="planet-title">{planets.name}</span>
         <div className="overview">
