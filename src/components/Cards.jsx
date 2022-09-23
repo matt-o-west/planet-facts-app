@@ -4,24 +4,26 @@ import "./Cards.css"
 
 function Cards(props) {
 
+  console.log(props.facts.rotation)
+  const temp = props.facts.temperature.match(/\d+/g).map(Number) + " °C"
 
     return (
       <div className="cards"> 
         <div className="card">  
             <div className="card-title">ROTATION TIME</div>
-            <div className="card-value">58.6 Days</div>
+            <div className="card-value">{props.facts.rotation}</div>
         </div>  
         <div className="card">  
             <div className="card-title">REVOLUTION TIME</div>
-            <div className="card-value">87.97 Days</div>
+            <div className="card-value">{props.facts.revolution}</div>
         </div>  
         <div className="card">  
             <div className="card-title">RADIUS</div>
-            <div className="card-value">2,439.7 KM</div>
+            <div className="card-value">{props.facts.radius}</div>
         </div>  
         <div className="card">  
             <div className="card-title">AVERAGE TEMP.</div>
-            <div className="card-value">430°c</div>
+            <div className="card-value">{temp}</div>
         </div>  
       </div>
     )

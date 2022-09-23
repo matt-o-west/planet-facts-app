@@ -14,30 +14,34 @@ function Planet() {
     setPlanets(event.target.value)
   }
 
+  //console.log(Data.forEach((planet) => {console.log(planet)}))
+  console.log(planets)
 
   useEffect(() => {
     Data.forEach(planet => {
-      if (params.planets === planet.name) {
+      if (params.planets.toLowerCase() === planet.name.toLowerCase()) {
+        
         setPlanets(planet)
+        console.log(planet.overview)
       }
     })
     //setLoading(false)
   }, [params])
 
   
-  console.log(params.planets)
+  //console.log(params.planets)
   //console.log(planet)
-  console.log(params)
+  //console.log(params)
 
 
     return (
       <div>
       <div className="planet-image"><img src="src/assets/planet-mercury.svg"></img></div>
       <div className="planet-info">
-        <span className="planet-title">Mercury</span>
+        <span className="planet-title">{planets.name}</span>
         <div className="overview">
             <p>
-                Mercury is the smallest planet in our solar system and closest to the sun. It is only slightly larger than Earth's moon. Mercury is the fastest planet, zipping around the sun every 88 Earth days.
+            {planets.overview.content}
             </p>
         </div>
         </div>
