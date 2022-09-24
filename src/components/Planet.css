@@ -44,3 +44,11 @@
     padding: 0;
     width: 500px;
 }
+
+.geology img {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    padding: 0;
+    width: 150px;
+}

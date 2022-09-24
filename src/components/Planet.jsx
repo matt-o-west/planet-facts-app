@@ -70,7 +70,9 @@ function Planet() {
         <div>
           <div className='planet-image'>
             <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
-            <img src={'src/assets/geology-' + planets.name + '.svg'}></img>
+          </div>
+          <div className='geology'>
+            <img src={'src/assets/geology-' + planets.name + '.png'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
