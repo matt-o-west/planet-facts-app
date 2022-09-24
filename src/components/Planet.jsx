@@ -1,7 +1,7 @@
 import './Planet.css'
 import Buttons from './Buttons'
 import Cards from './Cards'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Data from '../data.json'
 
@@ -9,11 +9,6 @@ function Planet() {
   const [planets, setPlanets] = useState(Data[3])
   const [content, setContent] = useState('overview')
   const params = useParams()
-  const ref = useRef()
-  //const [loading, setLoading] = useState(true)
-
-  //console.log(Data.forEach((planet) => {console.log(planet)}))
-  //console.log(planets)
 
   useEffect(() => {
     setPlanets(Data[3])
@@ -30,35 +25,67 @@ function Planet() {
   }, [params])
 
   function handleClick(e) {
-    if (
-      e.target.className === 'btn active' &&
-      e.target.innerHTML === 'Overview'
-    ) {
+    if (e.target.innerHTML === 'Overview') {
       setContent('overview')
-    } else if (
-      e.target.className === 'btn active' &&
-      e.target.innerHTML === 'Internal Structure'
-    ) {
+    } else if (e.target.innerHTML === 'Internal Structure') {
       setContent('structure')
-    } else if (
-      e.target.className === 'btn active' &&
-      e.target.innerHTML === 'Surface Geology'
-    ) {
+    } else if (e.target.innerHTML === 'Surface Geology') {
       setContent('geology')
+    }
+  }
+
+  function toggleContent() {
+    if (content === 'overview') {
+      return (
+        <div>
+          <div className='planet-image'>
+            <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
+          </div>
+          <div className='planet-info'>
+            <span className='planet-title'>{planets.name}</span>
+            <div className='overview'>
+              <p>{planets.overview.content}</p>
+            </div>
+          </div>
+        </div>
+      )
+    } else if (content === 'structure') {
+      return (
+        <div>
+          <div className='planet-image'>
+            <img
+              src={'src/assets/planet-' + planets.name + '-internal.svg'}
+            ></img>
+          </div>
+          <div className='planet-info'>
+            <span className='planet-title'>{planets.name}</span>
+            <div className='overview'>
+              <p>{planets.structure.content}</p>
+            </div>
+          </div>
+        </div>
+      )
+    } else if (content === 'geology') {
+      return (
+        <div>
+          <div className='planet-image'>
+            <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
+            <img src={'src/assets/geology-' + planets.name + '.svg'}></img>
+          </div>
+          <div className='planet-info'>
+            <span className='planet-title'>{planets.name}</span>
+            <div className='overview'>
+              <p>{planets.geology.content}</p>
+            </div>
+          </div>
+        </div>
+      )
     }
   }
 
   return (
     <div>
-      <div className='planet-image'>
-        <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
-      </div>
-      <div className='planet-info'>
-        <span className='planet-title'>{planets.name}</span>
-        <div className='overview'>
-          <p>{planets.overview.content}</p>
-        </div>
-      </div>
+      {toggleContent()}
       <Buttons onClick={handleClick} class={content} />
       <Cards facts={planets} />
     </div>

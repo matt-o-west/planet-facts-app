@@ -1,18 +1,24 @@
 //import {Link} from "react-router-dom"
-import "./Buttons.css"
+import './Buttons.css'
 
 function Buttons(props) {
-    console.log(props)
+  console.log(props.onClick)
 
-    return (
-      <div>
-        <div className="buttons">
-        <button className="btn" ref={props.ref}>Overview</button>
-        <button className="btn" ref={props.ref}>Internal Structure</button>
-        <button className="btn" ref={props.ref}>Surface Geology</button>
-        </div>
+  return (
+    <div>
+      <div className='buttons'>
+        <button className='btn' onClick={props.onClick}>
+          Overview
+        </button>
+        <button className='btn' onClick={props.onClick}>
+          Internal Structure
+        </button>
+        <button className='btn' onClick={props.onClick}>
+          Surface Geology
+        </button>
       </div>
-    )
-  }
-  
-  export default Buttons
+    </div>
+  )
+}
+
+export default Buttons
