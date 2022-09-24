@@ -15,7 +15,7 @@ function Planet() {
   }
 
   //console.log(Data.forEach((planet) => {console.log(planet)}))
-  //console.log(planets)
+  console.log(planets)
 
   useEffect(() => {
     Data.forEach(planet => {
@@ -33,12 +33,12 @@ function Planet() {
 
     return (
       <div>
-      <div className="planet-image"><img src={"src/assets/planet-" + planets.name + ".svg"}></img></div>
+      <div className="planet-image"><img src={"src/assets/planet-mercury.svg"}></img></div>
       <div className="planet-info">
         <span className="planet-title">{planets.name}</span>
         <div className="overview">
             <p>
-            {planets.overview.content}
+              {planets.overview.content}
             </p>
         </div>
         </div>
