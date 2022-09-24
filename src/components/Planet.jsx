@@ -1,21 +1,23 @@
 import "./Planet.css";
 import Buttons from "./Buttons"
 import Cards from "./Cards"
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useRef} from 'react'
 import {useParams} from "react-router-dom"
 import Data from "../data.json"
 
 function Planet() {
-  const [planets, setPlanets] = useState({})
+  const [planets, setPlanets] = useState(Data[3])
   const params = useParams()
+  const ref = useRef()
   //const [loading, setLoading] = useState(true)
 
-  function handleClick(event) { 
-    setPlanets(event.target.value)
-  }
-
+  
   //console.log(Data.forEach((planet) => {console.log(planet)}))
-  console.log(planets)
+  //console.log(planets)
+
+  useEffect(() => { 
+    setPlanets(Data[3])
+  }, [])
 
   useEffect(() => {
     Data.forEach(planet => {
@@ -33,7 +35,7 @@ function Planet() {
 
     return (
       <div>
-      <div className="planet-image"><img src={"src/assets/planet-mercury.svg"}></img></div>
+      <div className="planet-image"><img src={"src/assets/planet-" + planets.name + ".svg"}></img></div>
       <div className="planet-info">
         <span className="planet-title">{planets.name}</span>
         <div className="overview">
@@ -42,7 +44,7 @@ function Planet() {
             </p>
         </div>
         </div>
-        <Buttons onClick={handleClick}/>
+        <Buttons ref={ref}/>
         <Cards facts={planets}/>
 
       </div>
