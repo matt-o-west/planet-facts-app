@@ -38,7 +38,7 @@ function Planet() {
     if (content === 'overview') {
       return (
         <div>
-          <div className='planet-image'>
+          <div className='planet-image' id={planets.name}>
             <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='planet-info'>
@@ -52,7 +52,7 @@ function Planet() {
     } else if (content === 'structure') {
       return (
         <div>
-          <div className='planet-image'>
+          <div className='planet-image' id={planets.name}>
             <img
               src={'src/assets/planet-' + planets.name + '-internal.svg'}
             ></img>
@@ -68,7 +68,7 @@ function Planet() {
     } else if (content === 'geology') {
       return (
         <div>
-          <div className='planet-image'>
+          <div className='planet-image' id={planets.name}>
             <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='geology'>

@@ -26,8 +26,6 @@
     padding: 0rem;
 }
 
-
-
 .planet-image img:hover {
     transform: scale(1.1);
     transition: ease-out;
@@ -48,4 +46,52 @@
     left: 30%;
     padding: 2rem;
     width: 150px;
+}
+
+#Mercury {
+    padding: 5rem;
+    top:  25%;
+    width: 400px;
+}
+
+#Venus {
+    padding: 5rem;
+    top:  18%;
+    width: 400px;
+}
+
+#Earth {
+    padding: 5rem;
+    top:  12%;
+    width: 400px;
+}
+
+#Mars {
+    padding: 5rem;
+    top:  20%;
+    width: 400px;
+}
+
+#Jupiter {
+    padding: 5rem;
+    top:  6%;
+    width: 400px;
+}
+
+#Saturn {
+    padding: 5rem;
+    top:  4%;
+    width: 400px;
+}
+
+#Uranus {
+    padding: 5rem;
+    top:  10%;
+    width: 400px;
+}
+
+#Neptune {
+    padding: 5rem;
+    top:  10%;
+    width: 400px;
 }
