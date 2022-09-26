@@ -46,6 +46,12 @@ function Planet() {
             <div className='overview'>
               <p>{planets.overview.content}</p>
             </div>
+            <span className='wikipedia'>
+              Source:{' '}
+              <a href={planets.overview.source}>
+                Wikipedia <img src='src/assets/icon-source.svg'></img>
+              </a>
+            </span>
           </div>
         </div>
       )
@@ -62,6 +68,12 @@ function Planet() {
             <div className='overview'>
               <p>{planets.structure.content}</p>
             </div>
+            <span className='wikipedia'>
+              Source:{' '}
+              <a href={planets.structure.source}>
+                Wikipedia <img src='src/assets/icon-source.svg'></img>
+              </a>
+            </span>
           </div>
         </div>
       )
@@ -79,6 +91,12 @@ function Planet() {
             <div className='overview'>
               <p>{planets.geology.content}</p>
             </div>
+            <span className='wikipedia'>
+              Source:{' '}
+              <a href={planets.geology.source}>
+                Wikipedia <img src='src/assets/icon-source.svg'></img>
+              </a>
+            </span>
           </div>
         </div>
       )
