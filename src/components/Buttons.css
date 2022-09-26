@@ -36,3 +36,9 @@
 .btn:focus {
     background-color: #419EBB;
 }
+
+.buttons #Neptune {
+
+    top:  80%;
+    width: 400px;
+}

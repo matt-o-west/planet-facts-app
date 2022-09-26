@@ -88,7 +88,7 @@ function Planet() {
   return (
     <div>
       {toggleContent()}
-      <Buttons onClick={handleClick} class={content} />
+      <Buttons onClick={handleClick} class={content} id={planets} />
       <Cards facts={planets} />
     </div>
   )
