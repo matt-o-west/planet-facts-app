@@ -43,9 +43,25 @@
 .geology img {
     position: absolute;
     top: 56%;
-    left: 30%;
+    left: 30.5%;
     padding: 2rem;
     width: 150px;
+}
+
+.wikipedia {
+    font-size: 1.2rem;
+    font-weight: 510;
+    color: rgb(131, 131, 145);
+    margin-right: 16rem;
+}
+
+.wikipedia a {
+    color: white;
+    text-decoration: none;
+}
+
+.wikipedia a:hover {
+    color: rgb(131, 131, 145);
 }
 
 #Mercury {
@@ -201,4 +217,30 @@
 
 .buttons #Uranus:focus {
     background-color:#1ec2a4;
+}
+
+@media (min-width: 318px) and (max-width: 425px) {
+
+    #Earth img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Earth {
+        padding: 0;
+        left: 0;
+    }
+
+    .geology img {
+        display: none;
+    }
+
+    .planet-info {
+        position: absolute;
+        top: 36%;
+        left: 12%;
+        padding: 0;
+        width: 300px;
+        font-size: 1rem;
+    }
 }

@@ -48,3 +48,9 @@ ul a:active {
     transition-duration: 0.6s;
     scale: 1.35;
 }
+
+@media (max-width: 425px) {
+    nav a {
+        display: none;
+    }
+}
