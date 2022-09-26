@@ -36,3 +36,11 @@
 .btn:focus {
     background-color: #419EBB;
 }
+
+
+@media (min-width: 318px) and (max-width: 425px) {
+    .buttons {
+        display: none;
+    }
+
+}

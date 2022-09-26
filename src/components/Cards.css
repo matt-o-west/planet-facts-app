@@ -50,3 +50,38 @@
     font-family: "Antonio", sans-serif;
     font-size: 2.75rem;
 }
+
+@media (min-width: 318px) and (max-width: 425px) {
+    .cards {
+        padding: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        right: 8%;
+        top: 74%;
+        margin-left: 0;
+    }
+
+    .card {
+        display: inline-grid;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    .card-title {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+    .card-value {
+        font-size: 1.5rem;
+    }
+
+    .card#radius {
+        display: none;
+    }
+
+    .card#temp {
+        display: none;
+    }
+}
