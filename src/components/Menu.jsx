@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Menu.css'
 
 function BasicMenu() {
@@ -35,9 +36,27 @@ function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/mercury'>Mercury</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/venus'>Venus</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/earth'>Earth</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/mars  '>Mars</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/jupiter'>Jupiter</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/saturn'>Saturn</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className='menu-item'>
+          <Link to='/uranus'>Uranus</Link>
+        </MenuItem>
       </Menu>
     </div>
   )
