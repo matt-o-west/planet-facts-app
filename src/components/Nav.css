@@ -53,4 +53,8 @@ ul a:active {
     nav a {
         display: none;
     }
+
+    .planet-links {
+        display: none;
+    }
 }

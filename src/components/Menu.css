@@ -15,12 +15,23 @@
     z-index: 100;
 }
 
-ul {
+#basic-menu ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-right: 2rem;
     background-color: rgb(7, 7, 36);
     border: 1px solid rgb(56, 56, 79);
     
+}
+
+li.menu-item {
+    font-size: 1.25rem;
+    font-weight: 510;
+    font-family: "Spartan", sans-serif;
+    z-index: 1;
+}
+
+li.menu-item:hover {
+    background-color: rgb(131, 131, 145);
+    color: #fff;
 }
