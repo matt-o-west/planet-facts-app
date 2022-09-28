@@ -37,7 +37,16 @@
     background-color: #419EBB;
 }
 
+/*Tablet*/
+@media (min-width: 800px) and (max-width: 1024px) {
+    .buttons {
+        top: 72%;
+        width: 450px;
+    }
+    
+}
 
+/*Mobile*/
 @media (min-width: 318px) and (max-width: 425px) {
     .buttons {
         display: none;
