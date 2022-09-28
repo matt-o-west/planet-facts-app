@@ -85,3 +85,23 @@
         display: none;
     }
 }
+
+@media (min-width: 318px) and (max-height: 680px) {
+    .planet-info .overview {
+        font-size: .9rem;
+        width: 310px;
+        height: 160px;
+    }
+
+    .planet-info .source {
+        font-size: .9rem;
+        width: 310px;
+    }
+
+    .planet-image img {
+        width: 30%;
+        height: 30%;
+        margin-top: 1rem;
+    }
+    
+}
