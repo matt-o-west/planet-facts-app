@@ -1,18 +1,5 @@
 #menu-button {
-    position: absolute;
-    color: #fff;
-    top: 15%;
-    right: 10%;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(56, 56, 79);
-    font-weight: 500;
-    font-family: "Antonio", sans-serif;
-    font-size: 1.25rem;
-    border: 0;
-    border-radius: 6%;
-    cursor: pointer;
-    z-index: 100;
+    display: none;
 }
 
 #basic-menu ul {
@@ -20,8 +7,7 @@
     flex-direction: column;
     margin-right: 2rem;
     background-color: rgb(7, 7, 36);
-    border: 1px solid rgb(56, 56, 79);
-    
+    border: 1px solid rgb(56, 56, 79);    
 }
 
 li.menu-item {
@@ -34,4 +20,25 @@ li.menu-item {
 li.menu-item:hover {
     background-color: rgb(131, 131, 145);
     color: #fff;
+}
+
+@media (min-width: 318px) and (max-width: 425px) {
+    #menu-button {
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 15%;
+        right: 10%;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(56, 56, 79);
+        font-weight: 500;
+        font-family: "Antonio", sans-serif;
+        font-size: 1.25rem;
+        border: 0;
+        border-radius: 6%;
+        cursor: pointer;
+        z-index: 100;
+    }
+
 }

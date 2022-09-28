@@ -231,6 +231,84 @@
         left: 0;
     }
 
+    #Mercury img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Mercury {
+        padding: 0;
+        left: 0;
+        top: 12%;
+        
+    }
+
+    #Venus img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Venus {
+        padding: 0;
+        left: 0;
+        top: 12%;
+    }
+
+    #Mars img {
+        width: 35%;
+        height: 35%;
+    }
+
+    #Mars {
+        padding: 0;
+        left: 0;
+        top: 14%;
+    }
+
+    #Jupiter img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Jupiter {
+        padding: 0;
+        left: 0;
+        top: 12%;
+    }
+
+    #Saturn img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Saturn {
+        padding: 0;
+        left: 0;
+        top: 12%;
+    }
+
+    #Uranus img {
+        width: 38%;
+        height: 38%;
+    }
+
+    #Uranus {
+        padding: 0;
+        left: 0;
+        top: 12%;
+    }
+
+    #Neptune img {
+        width: 40%;
+        height: 40%;
+    }
+
+    #Neptune {
+        padding: 0;
+        left: 0;
+        top: 12%;
+    }
+
     .geology img {
         display: none;
     }
@@ -253,6 +331,10 @@
     }
     .overview {
         height: 192px;
+    }
+
+    .planet-title {
+        padding: 0;
     }
 
 }

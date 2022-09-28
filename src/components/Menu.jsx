@@ -46,7 +46,7 @@ function BasicMenu() {
           <Link to='/earth'>Earth</Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className='menu-item'>
-          <Link to='/mars  '>Mars</Link>
+          <Link to='/mars'>Mars</Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className='menu-item'>
           <Link to='/jupiter'>Jupiter</Link>
