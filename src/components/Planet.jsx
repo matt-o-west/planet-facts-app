@@ -39,7 +39,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
+            <img src={'public/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -49,7 +49,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.overview.source}>
-                Wikipedia <img src='src/assets/icon-source.svg'></img>
+                Wikipedia <img src='public/icon-source.svg'></img>
               </a>
             </span>
           </div>
@@ -59,9 +59,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img
-              src={'src/assets/planet-' + planets.name + '-internal.svg'}
-            ></img>
+            <img src={'public/planet-' + planets.name + '-internal.svg'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -71,7 +69,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.structure.source}>
-                Wikipedia <img src='src/assets/icon-source.svg'></img>
+                Wikipedia <img src='public/icon-source.svg'></img>
               </a>
             </span>
           </div>
@@ -81,10 +79,10 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'src/assets/planet-' + planets.name + '.svg'}></img>
+            <img src={'public/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='geology'>
-            <img src={'src/assets/geology-' + planets.name + '.png'}></img>
+            <img src={'public/geology-' + planets.name + '.png'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -94,7 +92,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.geology.source}>
-                Wikipedia <img src='src/assets/icon-source.svg'></img>
+                Wikipedia <img src='public/icon-source.svg'></img>
               </a>
             </span>
           </div>
