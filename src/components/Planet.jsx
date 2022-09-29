@@ -12,6 +12,13 @@ function Planet() {
 
   useEffect(() => {
     setPlanets(Data[3])
+    return (
+      <div>
+        {toggleContent()}
+        <Buttons onClick={handleClick} class={content} id={planets} />
+        <Cards facts={planets} />
+      </div>
+    )
   }, [])
 
   useEffect(() => {
@@ -39,7 +46,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'public/planet-' + planets.name + '.svg'}></img>
+            <img src={'/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -49,7 +56,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.overview.source}>
-                Wikipedia <img src='public/icon-source.svg'></img>
+                Wikipedia <img src='/icon-source.svg'></img>
               </a>
             </span>
           </div>
@@ -59,7 +66,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'public/planet-' + planets.name + '-internal.svg'}></img>
+            <img src={'/planet-' + planets.name + '-internal.svg'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -69,7 +76,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.structure.source}>
-                Wikipedia <img src='public/icon-source.svg'></img>
+                Wikipedia <img src='/icon-source.svg'></img>
               </a>
             </span>
           </div>
@@ -79,10 +86,10 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'public/planet-' + planets.name + '.svg'}></img>
+            <img src={'/planet-' + planets.name + '.svg'}></img>
           </div>
           <div className='geology'>
-            <img src={'public/geology-' + planets.name + '.png'}></img>
+            <img src={'/geology-' + planets.name + '.png'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -92,7 +99,7 @@ function Planet() {
             <span className='wikipedia'>
               Source:{' '}
               <a href={planets.geology.source}>
-                Wikipedia <img src='public/icon-source.svg'></img>
+                Wikipedia <img src='/icon-source.svg'></img>
               </a>
             </span>
           </div>
