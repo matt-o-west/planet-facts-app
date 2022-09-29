@@ -12,13 +12,6 @@ function Planet() {
 
   useEffect(() => {
     setPlanets(Data[3])
-    return (
-      <div>
-        {toggleContent()}
-        <Buttons onClick={handleClick} class={content} id={planets} />
-        <Cards facts={planets} />
-      </div>
-    )
   }, [])
 
   useEffect(() => {
