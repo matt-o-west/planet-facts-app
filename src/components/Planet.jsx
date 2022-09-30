@@ -38,19 +38,13 @@ function Planet() {
     if (content === 'overview') {
       return (
         <div>
-          <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '.svg'}></img>
-          </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
             <div className='overview'>
               <p>{planets.overview.content}</p>
             </div>
             <span className='wikipedia'>
-              Source:{' '}
-              <a href={planets.overview.source}>
-                Wikipedia <img src='/icon-source.svg'></img>
-              </a>
+              Source: <a href={planets.overview.source}>Wikipedia</a>
             </span>
           </div>
         </div>
@@ -58,19 +52,13 @@ function Planet() {
     } else if (content === 'structure') {
       return (
         <div>
-          <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '-internal.svg'}></img>
-          </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
             <div className='overview'>
               <p>{planets.structure.content}</p>
             </div>
             <span className='wikipedia'>
-              Source:{' '}
-              <a href={planets.structure.source}>
-                Wikipedia <img src='/icon-source.svg'></img>
-              </a>
+              Source: <a href={planets.structure.source}>Wikipedia</a>
             </span>
           </div>
         </div>
@@ -78,22 +66,13 @@ function Planet() {
     } else if (content === 'geology') {
       return (
         <div>
-          <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '.svg'}></img>
-          </div>
-          <div className='geology'>
-            <img src={'/geology-' + planets.name + '.png'}></img>
-          </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
             <div className='overview'>
               <p>{planets.geology.content}</p>
             </div>
             <span className='wikipedia'>
-              Source:{' '}
-              <a href={planets.geology.source}>
-                Wikipedia <img src='/icon-source.svg'></img>
-              </a>
+              Source: <a href={planets.geology.source}>Wikipedia</a>
             </span>
           </div>
         </div>
