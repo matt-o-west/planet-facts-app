@@ -39,7 +39,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '.svg'}></img>
+            <img src={'/planet-' + planets.name.toLowerCase() + '.svg'}></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -59,7 +59,9 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '-internal.svg'}></img>
+            <img
+              src={'/planet-' + planets.name.toLowerCase() + '-internal.svg'}
+            ></img>
           </div>
           <div className='planet-info'>
             <span className='planet-title'>{planets.name}</span>
@@ -79,7 +81,7 @@ function Planet() {
       return (
         <div>
           <div className='planet-image' id={planets.name}>
-            <img src={'/planet-' + planets.name + '.svg'}></img>
+            <img src={'/planet-' + planets.name.toLowerCase() + '.svg'}></img>
           </div>
           <div className='geology'>
             <img src={'/geology-' + planets.name + '.png'}></img>
