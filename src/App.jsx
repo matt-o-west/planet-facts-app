@@ -13,7 +13,7 @@ function App() {
     <main className='App'>
       <Nav />
       <Routes>
-        <Route path='/' element={<Navigate to='/earth' />} />
+        <Route path='/' element={<Navigate to='/mercury' />} />
         <Route path='/:planets' element={<Planet />} />
       </Routes>
     </main>
