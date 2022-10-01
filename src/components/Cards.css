@@ -62,7 +62,7 @@
 /*Regular mobile*/
 @media (min-width: 318px) and (max-width: 425px) {
     .cards {
-        padding: 0;
+        padding-top: 1rem;
         left: 0;
         position: absolute;
         width: 100%;
