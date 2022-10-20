@@ -111,3 +111,10 @@
     }
     
 }
+
+@media (min-width: 800px) and (max-width: 1024px){
+    .cards {
+        left: 3rem;
+        top: 100%;
+    }
+}
